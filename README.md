@@ -1,3 +1,14 @@
+# A Classroom Application
+
+Classroom builds on the the generally available realworld.io API spec and modifies the front end to create feeds for different subjects. Students can register and contribute to the classroom with whatever article they want to write. 
+
+![classroom](https://lh3.googleusercontent.com/z8yi_qLM62pSfq7dSc-U9MtIFGKgG3LTiG6Jxvh05sf3ZXkijZqUHoPzf2jj5MXTUb8uVaiPP3mTmjnaRfLtZptwpNCkU2oVP3pJjfh3mXMaLEmOAIidhG66THu78vbr6Pw2hwv5xNNnai0IBBnWjqtn5D9zIReYGcrhI83fmi4E2R4p8bKeFQe2CswYqbcJ-GmNKRh3Vc9vUPPQEmBBj19mjzSQhPSjMSCi19_gl0JxKo6cFUwWHKtYY4CTBy_HR6Pnw7Tcc1nnvnc58vElC_KyvG23DLkrWvfGgwQFnjs07GCI9e2xwqd-MxDgqFGDLSQ8Ty6D9emwJ1gdRlaE8Tvz_8eNUfvYcqVeMJksSyI1MT5BhkJUk22jhF0vRpLC_CV_HWJp514p7Ddvwmel1eeoD6AHHgqY5resjzG2dt7SWsQfsIHtxdaGU6w-CkOJW64z5apUONj3zCUTo1x6lieyvz8keY7GT_ACbsFSvg3uMKVdIGH4SddWnivSGeUlT9sQJ_XQRxsEFfrp2ZzAW1s8tfPvUhHKxBkb-tE7ONeO_MK-lMDhP4w-6ua-HwT2Xb6HyEOVuRHngbXkMMgn3LxKs0906vKxs-omkMhgs7BhEqR2JiUnhvRMIPwOcJBVclm7_raitk3vOqxBWytE336Rvi4TLpK3QxUXK87gWKLgZ3Tdaucmihs4ePckcsVwUITXexniLh32oSp3JSnb0b5i=w1205-h748-no?authuser=0)
+
+
+The details below have been retained from the parent project(s) that each build on each other. 
+---
+
+
 # ![React + Redux Example App](project-logo.png)
 [![Netlify Status](https://api.netlify.com/api/v1/badges/aa569c8f-ebd5-413e-9fb2-e34facc71873/deploy-status)](https://app.netlify.com/sites/react-redux-realworld/deploys)
 [![RealWorld Frontend](https://img.shields.io/badge/realworld-frontend-%23783578.svg)](http://realworld.io)
