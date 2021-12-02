@@ -34,10 +34,42 @@ const GlobalFeedTab = React.memo(props => {
       <button type='button'
         className={props.tab === 'all' ? 'nav-link active' : 'nav-link'}
         onClick={clickHandler}>
-        Global Feed
+        All Subjects Feed
       </button>
     </li>
   )
+})
+
+const MathFeedTab = React.memo(props => {
+    const clickHandler = ev => {
+        ev.preventDefault()
+        props.onTabClick('math', agent.Articles.math, agent.Articles.math())
+    }
+    return (
+        <li className='nav-item'>
+            <button type='button'
+                    className={props.tab === 'math' ? 'nav-link active' : 'nav-link'}
+                    onClick={clickHandler}>
+                Math Feeds
+            </button>
+        </li>
+    )
+})
+
+const AlphaFeedTab = React.memo(props => {
+    const clickHandler = ev => {
+        ev.preventDefault()
+        props.onTabClick('alphaFeed', agent.Articles.alphaFeed, agent.Articles.alphaFeed())
+    }
+    return (
+        <li className='nav-item'>
+            <button type='button'
+                    className={props.tab === 'alphaFeed' ? 'nav-link active' : 'nav-link'}
+                    onClick={clickHandler}>
+                Alphabet Feeds
+            </button>
+        </li>
+    )
 })
 
 const TagFilterTab = React.memo(props => {
@@ -76,6 +108,10 @@ const MainView = React.memo(props => {
             onTabClick={props.onTabClick} />
 
           <GlobalFeedTab tab={props.tab} onTabClick={props.onTabClick} />
+
+            <MathFeedTab tab={props.tab} onTabClick={props.onTabClick} />
+
+            <AlphaFeedTab tab={props.tab} onTabClick={props.onTabClick} />
 
           <TagFilterTab tag={props.tag} />
 

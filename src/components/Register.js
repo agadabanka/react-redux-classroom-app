@@ -53,10 +53,10 @@ class Register extends React.PureComponent {
           <div className='row'>
 
             <div className='col-md-6 offset-md-3 col-xs-12'>
-              <h1 className='text-xs-center'>Sign Up</h1>
+              <h1 className='text-xs-center'>Sign Up For Vaccine!</h1>
               <p className='text-xs-center'>
                 <Link to='/login'>
-                  Have an account?
+                  Already an account?
                 </Link>
               </p>
 
@@ -69,7 +69,7 @@ class Register extends React.PureComponent {
                     <input
                       className='form-control form-control-lg'
                       type='text'
-                      placeholder='Username'
+                      placeholder='Your Username'
                       value={this.props.username || ''}
                       onChange={this.changeUsername} />
                   </fieldset>
@@ -79,7 +79,7 @@ class Register extends React.PureComponent {
                       className='form-control form-control-lg'
                       type='email'
                       autoComplete='username'
-                      placeholder='Email'
+                      placeholder='Your Email'
                       value={this.props.email || ''}
                       onChange={this.changeEmail} />
                   </fieldset>

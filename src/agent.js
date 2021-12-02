@@ -6,7 +6,19 @@ const superagent = superagentPromise(_superagent, global.Promise);
 const API_ROOT = process.env.REACT_APP_BACKEND_URL || 'https://api.realworld.io/api';
 
 const encode = encodeURIComponent;
-const responseBody = res => res.body;
+
+/** Mock Server Responses for prototyped functionality **/
+const alphabetResponse = {"articles":[{"slug":"first-1097","title":"Vowels","description":"aeiou","body":"these are vowels","createdAt":"2021-11-30T03:33:33.004Z","updatedAt":"2021-11-30T03:33:33.004Z","tagList":[],"author":{"username":"abcdef","bio":"something","image":"https://api.realworld.io/images/smiley-cyrus.jpeg"},"comments":[],"favoritesCount":1,"favorited":true}],"articlesCount":4};
+
+const mathResponse = {"articles":[{"slug":"first-1097","title":"Compute Square Root","description":"Sqrt(2) ","body":"Sqrt(2) = 1.41","createdAt":"2021-11-30T03:33:33.004Z","updatedAt":"2021-11-30T03:33:33.004Z","tagList":[],"author":{"username":"abcdef","bio":"something","image":"https://api.realworld.io/images/smiley-cyrus.jpeg"},"comments":[],"favoritesCount":1,"favorited":true},
+    {"slug":"first-1097","title":"Compute Logarithm","description":"Log(x) ","body":"The logarithm is denoted \"logb x\" (pronounced as \"the logarithm of x to base b\", \"the base-b logarithm of x\", or most commonly \"the log, base b, of x\")","createdAt":"2021-12-1T03:33:33.004Z","updatedAt":"2021-12-1T03:33:33.004Z","tagList":[],"author":{"username":"abcdef","bio":"something","image":"https://api.realworld.io/images/smiley-cyrus.jpeg"},"comments":[],"favoritesCount":1,"favorited":true}],"articlesCount":4};
+
+const allSubjectResponse = {"articles":[{"slug":"first-1097","title":"Vowels","description":"aeiou","body":"these are vowels","createdAt":"2021-11-30T03:33:33.004Z","updatedAt":"2021-11-30T03:33:33.004Z","tagList":[],"author":{"username":"abcdef","bio":"something","image":"https://api.realworld.io/images/smiley-cyrus.jpeg"},"comments":[],"favoritesCount":1,"favorited":true},
+    {"slug":"first-1097","title":"Compute Square Root","description":"Sqrt(2) ","body":"Sqrt(2) = 1.41","createdAt":"2021-11-30T03:33:33.004Z","updatedAt":"2021-11-30T03:33:33.004Z","tagList":[],"author":{"username":"abcdef","bio":"something","image":"https://api.realworld.io/images/smiley-cyrus.jpeg"},"comments":[],"favoritesCount":1,"favorited":true},
+    {"slug":"first-1097","title":"Compute Logarithm","description":"Log(x) ","body":"The logarithm is denoted \"logb x\" (pronounced as \"the logarithm of x to base b\", \"the base-b logarithm of x\", or most commonly \"the log, base b, of x\")","createdAt":"2021-12-1T03:33:33.004Z","updatedAt":"2021-12-1T03:33:33.004Z","tagList":[],"author":{"username":"abcdef","bio":"something","image":"https://api.realworld.io/images/smiley-cyrus.jpeg"},"comments":[],"favoritesCount":1,"favorited":true}],"articlesCount":4};
+/** End Mock Responses **/
+
+const responseBody = res => {console.log(res.body); return res.body;};
 
 let token = null;
 const tokenPlugin = req => {
@@ -44,8 +56,9 @@ const Tags = {
 const limit = (count, p) => `limit=${count}&offset=${p ? p * count : 0}`;
 const omitSlug = article => Object.assign({}, article, { slug: undefined })
 const Articles = {
-  all: page =>
-    requests.get(`/articles?${limit(10, page)}`),
+  all: _ => allSubjectResponse,
+  alphaFeed: _ => alphabetResponse,
+  math: _ => mathResponse,
   byAuthor: (author, page) =>
     requests.get(`/articles?author=${encode(author)}&${limit(5, page)}`),
   byTag: (tag, page) =>

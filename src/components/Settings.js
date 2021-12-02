@@ -69,7 +69,7 @@ class SettingsForm extends React.PureComponent {
             <textarea
               className='form-control form-control-lg'
               rows='8'
-              placeholder='Short bio about you'
+              placeholder='Short blurb about you'
               value={bio || ''}
               onChange={this.updateState('bio')}
             />
@@ -102,7 +102,7 @@ class SettingsForm extends React.PureComponent {
             type='submit'
             disabled={this.state.inProgress}
           >
-            Update Settings
+            Update My Settings
           </button>
 
         </fieldset>

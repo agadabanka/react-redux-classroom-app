@@ -9,7 +9,7 @@ const mapDispatchToProps = dispatch => ({
 })
 
 const ListPagination = React.memo(props => {
-  if (props.articlesCount <= 10) {
+  if (props.articlesCount <= 2) {
     return null
   }
 
