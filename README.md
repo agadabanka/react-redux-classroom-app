@@ -6,6 +6,9 @@ Classroom builds on the the generally available realworld.io API spec and modifi
 
 
 The details below have been retained from the parent project(s) that each build on each other. 
+
+A demo version of this can be found at https://epic-classroom.netlify.app
+
 ---
 
 
