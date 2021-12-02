@@ -2,8 +2,8 @@
 
 Classroom builds on the the generally available realworld.io API spec and modifies the front end to create feeds for different subjects. Students can register and contribute to the classroom with whatever article they want to write. 
 
-![classroom](![Screen Shot 2021-12-01 at 11 36 46 PM](https://user-images.githubusercontent.com/541175/144463237-58fb7425-4028-4baf-a3f6-b02af765ad1a.png)
-)
+![Screen Shot 2021-12-01 at 11 36 46 PM](https://user-images.githubusercontent.com/541175/144463237-58fb7425-4028-4baf-a3f6-b02af765ad1a.png)
+
 
 
 The details below have been retained from the parent project(s) that each build on each other. 
