@@ -29,10 +29,11 @@ const mapDispatchToProps = dispatch => ({
 
 class Home extends React.PureComponent {
   componentDidMount() {
-    const tab = this.props.token ? 'feed' : 'fav';
+    // const tab = this.props.token ? 'feed' : 'math';
+    const tab = 'math';
     const articlesPromise = this.props.token ?
       agent.Articles.feed :
-      agent.Articles.fav;
+      agent.Articles.math;
 
     this.props.onLoad(tab, articlesPromise, Promise.all([agent.Tags.getAll(), articlesPromise()]));
   }
